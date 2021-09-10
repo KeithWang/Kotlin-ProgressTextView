@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <vic.sample.progresstextview.custom.ProgressTextView
+        android:id="@+id/progressTextView"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="36dp"
+        android:background="@drawable/bk"
+        app:invertedTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/progressTextView_decrease"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:originalTextColor="@color/black"
+        app:progress="50"
+        app:text="Hello World!"
+        app:textSize="24sp" />
+
+    <vic.sample.progresstextview.custom.ProgressTextView
+        android:id="@+id/progressTextView_decrease"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="36dp"
+        android:background="@drawable/bk"
+        app:invertedTextColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/seekbar"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTextView"
+        app:originalTextColor="@color/black"
+        app:progress="50"
+        app:progressIncrease="false"
+        app:text="Hello World!"
+        app:textSize="24sp" />
+
+    <androidx.appcompat.widget.AppCompatSeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="36dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/progressTextView_decrease" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

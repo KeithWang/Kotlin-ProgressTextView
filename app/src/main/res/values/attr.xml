@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ProgressTextView">
+        <attr name="text" format="string" />
+        <attr name="textSize" format="dimension" />
+        <attr name="textTypeface" format="integer" />
+        <attr name="originalTextColor" format="color" />
+        <attr name="invertedTextColor" format="color" />
+        <attr name="maxProgress" format="integer" />
+        <attr name="minProgress" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="progressIncrease" format="boolean" />
+    </declare-styleable>
+</resources>
