@@ -121,10 +121,12 @@ class ProgressTextView : View {
         * */
         if (mMaxProgress > mMinProgress && mCurrProgress in mMinProgress..mMaxProgress) {
 
+            val range = (mMaxProgress - mMinProgress)
+
             if (mProgressIncrease)
-                mRect.right = mRect.width() * mCurrProgress / mMaxProgress
+                mRect.right = mRect.width() * mCurrProgress / range
             else
-                mRect.left = mRect.width() * mCurrProgress / mMaxProgress
+                mRect.left = mRect.width() * mCurrProgress / range
 
             canvas.clipRect(mRect)
         }
